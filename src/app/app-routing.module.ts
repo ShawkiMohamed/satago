@@ -3,6 +3,9 @@ import { RouterModule } from '@angular/router';
 import { CustomLayoutComponent } from './custom-layout/custom-layout.component';
 import { VexRoutes } from '../@vex/interfaces/vex-route.interface';
 import { QuicklinkModule, QuicklinkStrategy } from 'ngx-quicklink';
+import { RegisterDriverComponent } from './view/pages/auth/register-driver/register-driver.component';
+import { RegisterAgentComponent } from './view/pages/auth/register-agent/register-agent.component';
+import { LoginComponent } from './pages/pages/auth/login/login.component';
 
 const routes: VexRoutes = [
   {
@@ -13,6 +16,19 @@ const routes: VexRoutes = [
     path: 'register',
     loadChildren: () => import('./pages/pages/auth/register/register.module').then(m => m.RegisterModule),
   },
+  {
+    path: 'loginme', component:LoginComponent
+     },
+  //register-driver
+  {
+    path: 'regdriver', component:RegisterDriverComponent
+     },
+  //
+  //register-agent
+  {
+    path: 'regagent', component:RegisterAgentComponent
+     },
+  //
   {
     path: 'forgot-password',
     loadChildren: () => import('./pages/pages/auth/forgot-password/forgot-password.module').then(m => m.ForgotPasswordModule),

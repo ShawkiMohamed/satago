@@ -37,7 +37,7 @@
 
   
 
-  <vex-scrollbar class="flex-1 flex flex-col">
+  <vex-scrollbar class="flex-1 flex flex-col" *ngIf="sideNav">
     <div class="pt-6 flex-1">
       <vex-sidenav-item *ngFor="let item of sideNav; trackBy: trackByRoute"
                         [item]="item"
@@ -50,6 +50,7 @@
     </div>
   </vex-scrollbar>
 
+  
   <div *ngIf="userVisible$ | async"
        class="vex-sidenav-user__container flex-none">
     <div #userProfileMenuOriginRef
@@ -58,7 +59,6 @@
          class="vex-sidenav-user flex items-center"
          matRipple
          matRippleColor="var(--sidenav-item-ripple-color)">
-      <img alt="User Avatar" class="vex-sidenav-user__image flex-none" src="assets/img/avatars/1.jpg"/>
       <div class="vex-sidenav-user__content flex-auto">
         <div class="vex-sidenav-user__title">David Smith</div>
         <div class="vex-sidenav-user__subtitle">Product Manager</div>

@@ -45,7 +45,8 @@ export class SidenavComponent implements OnInit {
     this._NewsService.getNews().subscribe( 
       data=> {
         this.sideNav = data
-        console.log(this.sideNav)
+        console.log("shawki")
+        console.log(data)
       }
        )  
 

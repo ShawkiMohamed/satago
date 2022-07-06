@@ -8,18 +8,31 @@ import { VexModule } from '../@vex/vex.module';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomLayoutModule } from './custom-layout/custom-layout.module';
 import { CustomHttpInterceptorInterceptor } from './core/interceptors/custom-http-interceptor.interceptor';
+import { LoginComponent } from './view/pages/auth/login/login.component';
+import { RegisterAgentComponent } from './view/pages/auth/register-agent/register-agent.component';
+import { RegisterDriverComponent } from './view/pages/auth/register-driver/register-driver.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginModule } from './pages/pages/auth/login/login.module';
+
+
+
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LoginComponent, RegisterAgentComponent, RegisterDriverComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
 
+    ReactiveFormsModule,
+    LoginModule,
+
     // Vex
     VexModule,
     CustomLayoutModule
+
+
   ],
   providers: [
     {
