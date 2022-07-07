@@ -46,7 +46,7 @@ export class SidenavComponent implements OnInit {
       data=> {
         this.sideNav = data
         console.log("shawki")
-        console.log(data)
+        console.log(this.sideNav)
       }
        )  
 

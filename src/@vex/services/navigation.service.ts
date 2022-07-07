@@ -19,14 +19,14 @@ export class NavigationService {
   }
 
   isLink(item: NavigationItem): item is NavigationLink {
-    return item.type === 'link';
+    return item.role === 1;
   }
 
   isDropdown(item: NavigationItem): item is NavigationDropdown {
-    return item.type === 'dropdown';
+    return item.role === 1;
   }
 
   isSubheading(item: NavigationItem): item is NavigationSubheading {
-    return item.type === 'subheading';
+    return item.role === 0 || item.submenu ===null;
   }
 }

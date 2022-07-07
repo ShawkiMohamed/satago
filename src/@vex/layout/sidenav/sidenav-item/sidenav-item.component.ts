@@ -19,7 +19,7 @@ export class SidenavItemComponent implements OnInit, OnChanges {
 
   @Input() item: NavigationItem;
   @Input() level: number;
-  isOpen: boolean;
+  isOpen: boolean = false;
   isActive: boolean;
 
   isLink = this.navigationService.isLink;

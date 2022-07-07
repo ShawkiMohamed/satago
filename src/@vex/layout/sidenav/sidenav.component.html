@@ -5,8 +5,8 @@
      class="sidenav flex flex-col">
   <div class="vex-sidenav-toolbar__container">
     <div class="sidenav-toolbar flex-none flex items-center">
-      <img [src]="imageUrl$ | async" alt="Logo" class="w-6 select-none flex-none"/>
-      <h2 class="vex-sidenav-toolbar__headline flex-auto">{{ title$ | async }}</h2>
+      <img src="assets/img/logo.png" alt="Logo" class="w-6 select-none flex-none"/>
+      <h2 class="vex-sidenav-toolbar__headline flex-auto">Sata Go</h2>
       <button (click)="toggleCollapse()"
               *ngIf="showCollapsePin$ | async"
               class="w-8 h-8 -mr-2 leading-none flex-none hidden lg:block"
@@ -60,8 +60,8 @@
          matRipple
          matRippleColor="var(--sidenav-item-ripple-color)">
       <div class="vex-sidenav-user__content flex-auto">
-        <div class="vex-sidenav-user__title">David Smith</div>
-        <div class="vex-sidenav-user__subtitle">Product Manager</div>
+        <div class="vex-sidenav-user__title">الاعدادات</div>
+        <!-- <div class="vex-sidenav-user__subtitle">Product Manager</div> -->
       </div>
       <mat-icon class="vex-sidenav-user__dropdown-icon flex-none" svgIcon="mat:arrow_drop_down"></mat-icon>
     </div>
